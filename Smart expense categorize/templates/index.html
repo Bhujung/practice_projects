@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Categorizer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💰 Smart Expense Categorizer</h1>
+
+    {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="description"
+            placeholder="What did you spend on?"
+            required>
+
+        <input
+            type="number"
+            name="amount"
+            step="0.01"
+            min="0"
+            placeholder="Amount ($)"
+            required>
+
+        <button type="submit">
+            Analyze Expense
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <div class="result">
+
+        <h2>Expense Record</h2>
+
+        <p>
+            <strong>Item:</strong>
+            {{ result.description }}
+        </p>
+
+        <p>
+            <strong>Amount:</strong>
+            ${{ "%.2f"|format(result.amount) }}
+        </p>
+
+        <p>
+            <strong>Category:</strong>
+            {{ result.category }}
+        </p>
+
+        <p>
+            <strong>Advice:</strong>
+            {{ result.advice }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
