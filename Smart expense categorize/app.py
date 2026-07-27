@@ -13,7 +13,7 @@ def home():
         description = request.form["description"].strip()
         amount_input = request.form["amount"]
 
-        # Validating description
+        # Validating description.  
         if not any(char.isalpha() for char in description):
             error = "Please enter a valid item name (must contain letters)."
             return render_template("index.html", error=error)
