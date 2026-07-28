@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    padding:40px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+header h1{
+    font-size:3rem;
+    color:#2c3e50;
+}
+
+header p{
+    color:gray;
+    margin-top:10px;
+}
+
+.layout{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#34495e;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.btn{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    background:#27ae60;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#219150;
+}
+
+.clear-btn{
+    background:#e74c3c;
+}
+
+.clear-btn:hover{
+    background:#c0392b;
+}
+
+.metrics-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.metric-box{
+    background:#f7f7f7;
+    padding:20px;
+    border-radius:8px;
+}
+
+.metric-box p{
+    font-size:2rem;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.best{
+    border-left:5px solid #27ae60;
+}
+
+.worst{
+    border-left:5px solid #e74c3c;
+}
+
+.sales-list{
+    list-style:none;
+}
+
+.sales-list li{
+    display:flex;
+    justify-content:space-between;
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+.error{
+    color:red;
+    margin-top:15px;
+}
+
+@media(max-width:768px){
+
+    .layout{
+        grid-template-columns:1fr;
+    }
+
+}
