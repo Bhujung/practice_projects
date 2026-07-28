@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Details</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Account Details</h1>
+
+    <form action="/details" method="POST">
+
+        <input
+            type="text"
+            name="acc_number"
+            placeholder="Account Number"
+            required>
+
+        <button type="submit">
+            Show Details
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

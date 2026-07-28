@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Withdraw</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Withdraw Balance</h1>
+
+    <form action="/withdraw" method="POST">
+
+        <input
+            type="text"
+            name="acc_number"
+            placeholder="Account Number"
+            required>
+
+        <input
+            type="number"
+            name="amount"
+            placeholder="Withdrawal Amount"
+            required>
+
+        <button type="submit">
+            Withdraw
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

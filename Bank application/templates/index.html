@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Application</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Bank Application</h1>
+
+    <form action="/menu" method="POST">
+
+        <label>Select Option</label>
+
+        <select name="choice" required>
+            <option value="">Choose</option>
+            <option value="1">1. Create Account</option>
+            <option value="2">2. Deposit Balance</option>
+            <option value="3">3. Withdraw Balance</option>
+            <option value="4">4. Show Details</option>
+            <option value="5">5. Exit</option>
+        </select>
+
+        <button type="submit">
+            Continue
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

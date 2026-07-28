@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deposit</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Deposit Balance</h1>
+
+    <form action="/deposit" method="POST">
+
+        <input
+            type="text"
+            name="acc_number"
+            placeholder="Account Number"
+            required>
+
+        <input
+            type="number"
+            name="amount"
+            placeholder="Deposit Amount"
+            required>
+
+        <button type="submit">
+            Deposit
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
